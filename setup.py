@@ -34,7 +34,7 @@ def coerce_file(fn):
             tmp.flush()
             text, stderr = subprocess.Popen(['pandoc', '-t', 'rst', tmp.name],
                 stdout=subprocess.PIPE).communicate()
-    return text.decode('utf-8')
+    return text
 
 
 setup(name='qifqif',
