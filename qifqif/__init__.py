@@ -200,7 +200,7 @@ def process_transaction(t, options):
 
     print('---\n' + TERM.clear_eol, end='')
     print_transaction(t, extras=extras)
-    edit = options['force'] > 1 or (options['force'] and
+    edit = int(options['force']) > 1 or (options['force'] and
                                     t['category'] not in tags.TAGS)
     audit = options['audit']
     if t['category']:
